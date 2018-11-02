@@ -1,0 +1,53 @@
+.page {
+    background: #eceff1;
+}
+
+
+/** Slider image */
+.slider-image {}
+
+/** Slider title format */
+.slider-title {
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(125, 125, 125);
+    padding: 8;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+/** Arrows */
+.arrow {
+    color: #ffffff;
+    font-size: 32;
+    vertical-align: middle;
+    padding: 10;
+}
+
+/** Arrow left wrapper */
+.arrow.arrow-left {}
+
+/** Arrow right */
+.arrow.arrow-right {}
+
+
+.product-amount {
+    font-weight: 600;
+}
+
+.product-info {
+    background: #fff;
+    padding: 15px;
+}
+
+
+
+.header {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.size-nav-font {
+    font-size: 30px;
+    margin: 0px 20px;
+}

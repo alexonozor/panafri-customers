@@ -1,0 +1,40 @@
+.card-view {
+    border-width: 1;
+    border-color: #cfd8dc;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.card-view .card-image img {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.card-view .card-image  {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-height: 150em;
+    height: 150em;
+    overflow: hidden;
+}
+
+.card-view .card-content {
+    padding: 10em;
+}
+
+.card-content .title {
+    font-size: 15em;
+    font-weight: 800;
+    color: #455a64;
+}

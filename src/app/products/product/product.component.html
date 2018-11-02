@@ -1,0 +1,22 @@
+<ActionBar title="Gucci Bag" class="action-bar">
+  <NavigationButton android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+<ScrollView>
+  <StackLayout class="page">
+    <StackLayout  *ngIf="!isBusy">
+      <GridLayout [carousel]="images" carouselLabelOverlay="false" carouselSpeed="2000"></GridLayout>
+      <StackLayout class="p-20 product-info">
+        <Label text="Gucci bag blue net" textWrap="true" class="product-title h2"></Label>
+        <Label text="N4,000" textWrap="true" class="product-amount h2"></Label>
+        <Label text="&#xf3c5; Lekki right side 2km close to you" textWrap="true" class="product-location fas"></Label>
+      </StackLayout>
+      <StackLayout class="p-20 product-info product-description m-t-8">
+          <Label text="Description" textWrap="true" class="header h3"></Label>
+          <Label text="Deep Cleansing Shampoo is a classic shampoo that refreshes hair for added body and shine and contains a clarifying formula for removing build-up and impurities." textWrap="true" class="header"></Label>
+          <Button class="btn btn-active btn-primary" text="Request"></Button>
+        </StackLayout>
+    </StackLayout>
+    <ActivityIndicator row="1" #activityIndicator [busy]="isBusy" (busyChange)="onBusyChanged($event)" width="50" height="50"
+      class="activity-indicator"></ActivityIndicator>
+  </StackLayout>
+</ScrollView>

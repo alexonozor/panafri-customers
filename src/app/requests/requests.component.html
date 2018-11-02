@@ -1,0 +1,24 @@
+<ActionBar title="Requests" class="action-bar">
+    <NavigationButton android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+
+<Page class="page">
+    <StackLayout *ngIf="!isBusy">
+        <circularProgressBar [size]="size[2]" [progress]="progress[2]"></circularProgressBar>
+    </StackLayout>
+    <ActivityIndicator row="1" #activityIndicator [busy]="isBusy" (busyChange)="onBusyChanged($event)" width="50"
+        height="50" class="activity-indicator"></ActivityIndicator>
+
+</Page>
+
+<ScrollView class="page">
+    <StackLayout class="home-panel" *ngIf="!isBusy">
+        <circularProgressBar [size]="size[0]" [progress]="progress[0]"></circularProgressBar>
+        <StackLayout class="m-y-15"></StackLayout>
+        <circularProgressBar [size]="size[1]" [progress]="progress[1]"></circularProgressBar>
+        <StackLayout class="m-y-15"></StackLayout>
+        <circularProgressBar [size]="size[2]" [progress]="progress[2]"></circularProgressBar>
+    </StackLayout>
+    <ActivityIndicator row="1" #activityIndicator [busy]="isBusy" (busyChange)="onBusyChanged($event)" width="50"
+        height="50" class="activity-indicator"></ActivityIndicator>
+</ScrollView>

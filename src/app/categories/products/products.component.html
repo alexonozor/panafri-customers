@@ -1,0 +1,67 @@
+<ActionBar [title]="'Category ' + categoryId" class="action-bar">
+    <NavigationButton android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+
+<ScrollView>
+    <StackLayout>
+        <SearchBar [hint]="'Search' + ' category ' + categoryId" (loaded)="sBLoaded($event)" [text]="searchPhrase" (submit)="onSearchSubmit($event)"></SearchBar>
+        <GridLayout rows="*" columns="*, *, *">
+            <Button class="btn btn-outline" row="0" col="0" class="fab" text="&#xf009; VIEW"></Button>
+            <Button class="btn btn-outline" row="0" col="1" class="fab" text="&#Xf161; SORT"></Button>
+            <Button class="btn btn-outline" row="0" col="2" class="fab" text="&#Xf0b0; FILTER"></Button>
+        </GridLayout>
+
+
+        <GridLayout rows="*, *" columns="*, *">
+            <StackLayout class="card-view card card-3" row="0" col="0">
+                <StackLayout class="card-image" (tap)="goToProduct('i')">
+                    <Image src="https://apollo-ireland.akamaized.net/v1/files/8ljfih0ar32j1-NG/image;s=600x1200;q=20"
+                        stretch="fill" decodeWidth="400" decodeHeight="400" loadMode="async"></Image>
+                </StackLayout>
+                <StackLayout class="card-content">
+                    <Label class="title" text="Gucci bag"></Label>
+                    <Label class="price" text="N50,000"></Label>
+                    <Label class="loaction" text="Fashion in Berger (1km near you)"></Label>
+                    <Button class="btn btn-primary btn-active" text="Request" (tap)="request()"></Button>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout class="card-view card card-3" row="0" col="1">
+                <StackLayout class="card-image" (tap)="goToProduct('i')">
+                    <Image src="https://apollo-ireland.akamaized.net/v1/files/8ljfih0ar32j1-NG/image;s=600x1200;q=20"
+                        stretch="fill" decodeWidth="400" decodeHeight="400" loadMode="async"></Image>
+                </StackLayout>
+                <StackLayout class="card-content">
+                    <Label class="title" text="Gucci bag"></Label>
+                    <Label class="price" text="N50,000"></Label>
+                    <Label class="loaction" text="Fashion in Berger (3km near you)"></Label>
+                    <Button class="btn btn-primary btn-active" text="Request" (tap)="request()"></Button>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout class="card-view card card-3" row="1" col="0">
+                <StackLayout class="card-image" (tap)="goToProduct('i')">
+                    <Image src="https://apollo-ireland.akamaized.net/v1/files/8ljfih0ar32j1-NG/image;s=600x1200;q=20"
+                        stretch="fill" decodeWidth="400" decodeHeight="400" loadMode="async"></Image>
+                </StackLayout>
+                <StackLayout class="card-content">
+                    <Label class="title" text="Gucci bag"></Label>
+                    <Label class="price" text="N50,000"></Label>
+                    <Label class="loaction" text="Fashion in Berger (1km near you)"></Label>
+                    <Button class="btn btn-primary btn-active" text="Request" (tap)="request()"></Button>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout class="card-view card card-3" row="1" col="1">
+                <StackLayout class="card-image" (tap)="goToProduct('i')">
+                    <Image src="https://apollo-ireland.akamaized.net/v1/files/8ljfih0ar32j1-NG/image;s=600x1200;q=20"
+                        stretch="fill" decodeWidth="400" decodeHeight="400" loadMode="async"></Image>
+                </StackLayout>
+                <StackLayout class="card-content">
+                    <Label class="title" text="Gucci bag"></Label>
+                    <Label class="price" text="N50,000"></Label>
+                    <Label class="loaction" text="Fashion in Berger (3km near you)"></Label>
+                    <Button class="btn btn-primary btn-active" text="Request" (tap)="request()"></Button>
+                </StackLayout>
+            </StackLayout>
+        </GridLayout>
+    </StackLayout>
+</ScrollView>
